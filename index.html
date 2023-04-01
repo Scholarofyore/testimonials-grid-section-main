@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
@@ -19,6 +21,9 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
     }
   
     /* Class Styling Starts Here */
@@ -26,14 +31,109 @@
     /* Main Container Style */
     .container {
       background-color: white;
-      min-width: 1440px;
+      width: 1440px;
+      margin: 0 auto;
     }
 
-    /* Image Style */
+    /* Image and Font Styles */
+
+    .graduate-gray, .graduate-white {
+      margin: 0 auto 30px;
+    }
+
+    .name-gray, .name-white {
+      margin-bottom: 5px;
+    }
+
+    .graduate-gray, .graduate-white, .name-gray, .name-white {
+      position: relative;
+      top: 10px;
+    }
+
+    .heading-gray, .heading-white {
+      margin-top: 35.42px;
+    }
 
     .pfp {
-      border: 3px solid white;
+      border: 2px solid hsla(0, 0%, 81%, 0.5);
       float: left;
+      border-radius: 100%;
+      margin-right: 20px;
+    }
+
+    /* Font Styles For dark coloured backgrounds */
+
+    .name-white {
+      color: hsl(0, 0%, 81%);
+    }
+
+    .graduate-white {
+      color: hsla(0, 0%, 81%, 0.5);
+    }
+
+    .review-paragraph-white {
+      color: hsla(0, 0%, 81%, 70%);
+    }
+
+    .heading-white {
+      font-weight: 600;
+      color: white;
+    }
+
+    /* Font styles for white colored backgrounds */
+    .name-gray {
+      color: hsl(217, 19%, 35%);
+    }
+
+    .graduate-gray {
+      color: hsla(217, 19%, 35%, 50%)
+    }
+
+    .heading-gray {
+      font-weight: 600;
+      color: hsl(217, 19%, 35%);
+    }
+
+    .review-paragraph-gray {
+      color: hsla(217, 19%, 35%, 70%);
+    }
+
+
+    /* Testimonia Styles */
+
+    .testimonial {
+      padding: 2% 2%;
+      position: relative;
+    }
+
+    /* Background color and Image Styles */
+    .daniel {
+      background-color: hsl(263, 55%, 52%);
+      background-image: url(images/bg-pattern-quotation.svg);
+      background-position: 80% 0%;
+      background-repeat: no-repeat;
+    }
+
+    .jonathan {
+      background-color: hsl(217, 19%, 35%);
+    }
+
+    .jeanette {
+      background-color:  hsl(0, 0%, 100%);
+    }
+
+    .patrick {
+      background-color: hsl(219, 29%, 14%);
+    }
+
+    .kira {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    /* Grid Styles */
+
+    .container {
+      grid: 49% 1% 49% / repeat(2, 23.75 1%) 23.75%;
     }
     
     .attribution { font-size: 11px; text-align: center; }
@@ -42,67 +142,72 @@
 </head>
 <body>
   <div class="container">
-    <div class="testimonia daniel">
+
+    <div class="testimonial daniel">
       <div class="header">
         <img src="images/image-daniel.jpg" alt="profile-picture" class="pfp">
-        <p class="name">Daniel Clifford</p>  
-        <p class="graduate">Verified Graduate</p>
+        <p class="name-white">Daniel Clifford</p>  
+        <p class="graduate-white">Verified Graduate</p>
       </div>
-      <h1>I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+      <h1 class="heading-white">I received a job offer mid-course, and the subjects I learned were current, if not more so, 
         in the company I joined. I honestly feel I got every penny’s worth.
       </h1>
-      <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+      <p class="review-paragraph-white">“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
         transition and have heard some people who had an amazing experience here. I signed up 
         for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
         The next 12 weeks was the best - and most grueling - time of my life. Since completing 
         the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
       </p>
     </div>
+
     <div class="testimonial jonathan">
       <div class="header">
         <img src="images/image-jonathan.jpg" alt="profile-picture" class="pfp">
-        <p class="name">Jonathan Walters</p> 
-        <p class="graduate">Verified Graduate</p>
+        <p class="name-white">Jonathan Walters</p> 
+        <p class="graduate-white">Verified Graduate</p>
       </div> 
-      <h1>The team was very supportive and kept me motivated</h1>
-      <p class="testimonia-text">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+      <h1 class="heading-white">The team was very supportive and kept me motivated</h1>
+      <p class="review-paragraph-white">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
         for a big company. This was one of the best investments I’ve made in myself. ”
       </p>
     </div>
+
     <div class="testimonial jeanette">
       <div class="header">
         <img src="images/image-jeanette.jpg" alt="profile-picture" class="pfp">
-        <p class="name">Jeanette Harmon</p>
-        <p class="graduate">Verified Graduate</p>
+        <p class="name-gray">Jeanette Harmon</p>
+        <p class="graduate-gray">Verified Graduate</p>
       </div>
-      <h1>An overall wonderful and rewarding experience</h1>
-      <p class="testimonia-text">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+      <h1 class="heading-gray">An overall wonderful and rewarding experience</h1>
+      <p class="review-paragraph-gray">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
         for a big company. This was one of the best investments I’ve made in myself. ”
       </p>
     </div>
-    <div class="testimonial Patrick">
+
+    <div class="testimonial patrick">
       <div class="header">
         <img src="images/image-patrick.jpg" alt="profile-picture" class="pfp">
-        <p class="name">Patrick Abrams</p>
-        <p class="graduate">Verified Graduate</p>
+        <p class="name-white">Patrick Abrams</p>
+        <p class="graduate-white">Verified Graduate</p>
       </div>
-      <h1>Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+      <h1 class="heading-white">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
         learning from their experiences was easy.
       </h1>
-      <p class="testimonia-text">“ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+      <p class="review-paragraph-white">“ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
         gave me the confidence necessary to be able to go out in the world and present myself as a capable 
         junior developer. The standard is above the rest. You will get the personal attention you need from 
         an incredible community of smart and amazing people. ”
       </p>
     </div>
+
     <div class="testimonial kira">
       <div class="header">
         <img src="images/image-kira.jpg" alt="profile-picture" class="pfp">
-        <p class="name">Kira Whittle</p>
-        <p class="graduate">Verified Graduate</p>
+        <p class="name-gray">Kira Whittle</p>
+        <p class="graduate-gray">Verified Graduate</p>
       </div>    
-      <h1>Such a life-changing experience. Highly recommended!</h1>
-      <p class="testimonia-text"> “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
+      <h1 class="heading-gray">Such a life-changing experience. Highly recommended!</h1>
+      <p class="review-paragraph-gray"> “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
         professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
         student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
         did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
