@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: hsl(208, 40%, 81%);
+  }
+
+  /* Class Styling Starts Here */
+
+  /* Main Container Style */
+  .container {
+    background-color: hsl(208, 40%, 81%);
+    max-width: 1440px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: 320px 25px 320px;
+    grid-template-columns: repeat(3, 323px 0.4px) 303px;
+    justify-content: space-evenly;
+    padding: 3px 20px;
+  }
+
+  /* Testimonia Styles */
+
+  .testimonial {
+    padding: 18px 35px;
+    position: relative;
+    border-radius: 3% / 3%;
+  }
+
+  /* Image and Font Styles */
+
+  .graduate-gray, .graduate-white {
+    margin: 0 auto 30px;
+  }
+
+  .name-gray, .name-white {
+    margin-bottom: 5px;
+  }
+
+  .graduate-gray, .graduate-white, .name-gray, .name-white {
+    position: relative;
+    top: 10px;
+  }
+
+  .heading-gray, .heading-white {
+    margin-top: 35.42px;
+  }
+
+  .pfp {
+    border: 2px solid hsla(0, 0%, 81%, 0.5);
+    float: left;
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+
+  /* Font Styles For dark coloured backgrounds */
+
+  .name-white {
+    color: hsl(0, 0%, 81%);
+  }
+
+  .graduate-white {
+    color: hsla(0, 0%, 81%, 0.5);
+  }
+
+  .review-paragraph-white {
+    color: hsla(0, 0%, 81%, 70%);
+    line-height: 1.5;
+  }
+
+  .heading-white {
+    font-weight: 600;
+    color: white;
+  }
+
+  /* Font styles for white colored backgrounds */
+  .name-gray {
+    color: hsl(217, 19%, 35%);
+  }
+
+  .graduate-gray {
+    color: hsla(217, 19%, 35%, 50%)
+  }
+
+  .heading-gray {
+    font-weight: 600;
+    color: hsl(217, 19%, 35%);
+  }
+
+  .review-paragraph-gray {
+    color: hsla(217, 19%, 35%, 70%);
+    line-height: 1.5;
+  }
+
+  /* Background color and Image Styles */
+  .daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-position: 80% 0%;
+    background-repeat: no-repeat;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    border-radius: 2% / 4%;
+  }
+
+  .jonathan {
+    background-color: hsl(217, 19%, 35%);
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+  }
+
+  .jeanette {
+    background-color:  hsl(0, 0%, 100%);
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
+  .patrick {
+    background-color: hsl(219, 29%, 14%);
+    grid-row: 3 / 4;
+    grid-column: 3 / 6;
+    border-radius: 2% / 4%;
+  }
+
+  .kira {
+    background-color: hsl(0, 0%, 100%);
+    grid-row: 1 / 4;
+    grid-column: 7 / 8;
+    border-radius: 4% / 2%;
+  }
+
+  /* Media Queries */
+  
+  @media screen and (max-width: 1350px) {
+    .container {
+      margin: 30px auto;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .testimonial {
+      width: 45%;
+      justify-content: space-evenly;
+      position: relative;
+      border-radius: 2% / 4%;
+      margin: 15px auto;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .container {
+    margin: 30px auto;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .testimonial {
+    width: 100%;
+    position: relative;
+    border-radius: 4% / 3%;
+    margin: 10px auto;
+  }
+    
+  }
+  
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
